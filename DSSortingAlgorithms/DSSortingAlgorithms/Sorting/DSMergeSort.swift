@@ -49,13 +49,16 @@ class DSMergeSort {
             }
         }
         
-        if leftIndex < leftArray.count {
-            sortedArray.append(contentsOf: leftArray[leftIndex...])
+        while leftIndex < leftArray.count {
+            sortedArray.append(leftArray[leftIndex])
             leftIndex += 1
-        } else if rightIndex < rightArray.count {
-            sortedArray.append(contentsOf: rightArray[rightIndex...])
+        }
+        
+        while rightIndex < rightArray.count {
+            sortedArray.append(rightArray[rightIndex])
             rightIndex += 1
         }
+        
         return sortedArray
     }
 
